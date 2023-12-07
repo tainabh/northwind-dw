@@ -14,4 +14,13 @@ sources:
                    
     - name: categories
     - name: suppliers
+    - name: employees
+    - name: orders
+      description: uma linha por pedido (por NF), inclui pedidos cancelados e deletados
+      columns:
+        - name: order_id
+          tests:
+            - unique
+            - not_null            
+    - name: orders_details
       
